@@ -44,7 +44,7 @@ public class ImageFullScreenActivity extends AppCompatActivity {
             }
         });
         binding.recyclerViewHorizontel.setHasFixedSize(true);
-        binding.recyclerViewHorizontel.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true));
+        binding.recyclerViewHorizontel.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false));
         binding.recyclerViewHorizontel.setAdapter(imagesAdapter);
     }
 

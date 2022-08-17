@@ -52,6 +52,13 @@ public class FullScreenAdapter extends RecyclerView.Adapter<FullScreenAdapter.Vi
                     .placeholder(R.drawable.plceholder)
                     .into(holder.photoItemBinding.imgPhoto);
         }
+        if (PhotoModelArrayList.get(position).getTitle()!=null){
+            holder.photoItemBinding.title.setText("Title :"+PhotoModelArrayList.get(position).getTitle());
+        }
+        if (PhotoModelArrayList.get(position).getExplanation()!=null){
+            holder.photoItemBinding.description.setText("Descrption : "+PhotoModelArrayList.get(position)
+            .getExplanation());
+        }
 
         holder.itemView.setOnClickListener(v ->
                 recyclerviewItemClickInterface.onItemClick(position)
